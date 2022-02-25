@@ -1,5 +1,4 @@
 import {Command, CliUx, Flags} from '@oclif/core'
-import notifier = require('node-notifier');
 import chalk = require('chalk');
 
 export default class Hello extends Command {
@@ -24,11 +23,6 @@ hello friend from oclif! (./src/commands/hello/index.ts)
     this.log(chalk.red('funny'))
     await CliUx.ux.wait(3000)
     CliUx.ux.action.stop()
-
-    notifier.notify({
-      title: 'My notification',
-      message: 'Hello!'
-    })
 
     // let a1 = await CliUx.ux.prompt('What is your name?')
     // this.log(a1)
