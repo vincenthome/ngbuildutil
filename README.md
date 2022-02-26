@@ -20,7 +20,7 @@ $ npm install -g ngbuildutil
 $ ngbuildutil COMMAND
 running command...
 $ ngbuildutil (--version)
-ngbuildutil/0.0.0 linux-x64 node-v16.13.0
+ngbuildutil/0.0.1 linux-x64 node-v16.13.0
 $ ngbuildutil --help [COMMAND]
 USAGE
   $ ngbuildutil COMMAND
@@ -29,8 +29,8 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`ngbuildutil hello PERSON`](#ngbuildutil-hello-person)
-* [`ngbuildutil hello world`](#ngbuildutil-hello-world)
+* [`ngbuildutil hello [PERSON]`](#ngbuildutil-hello-person)
+* [`ngbuildutil hello world [COUNTRY]`](#ngbuildutil-hello-world-country)
 * [`ngbuildutil help [COMMAND]`](#ngbuildutil-help-command)
 * [`ngbuildutil plugins`](#ngbuildutil-plugins)
 * [`ngbuildutil plugins:inspect PLUGIN...`](#ngbuildutil-pluginsinspect-plugin)
@@ -39,19 +39,22 @@ USAGE
 * [`ngbuildutil plugins:uninstall PLUGIN...`](#ngbuildutil-pluginsuninstall-plugin)
 * [`ngbuildutil plugins update`](#ngbuildutil-plugins-update)
 
-## `ngbuildutil hello PERSON`
+## `ngbuildutil hello [PERSON]`
 
 Say hello
 
 ```
 USAGE
-  $ ngbuildutil hello [PERSON] -f <value>
+  $ ngbuildutil hello [PERSON] -f <value> [--json]
 
 ARGUMENTS
   PERSON  Person to say hello to
 
 FLAGS
   -f, --from=<value>  (required) Whom is saying hello
+
+GLOBAL FLAGS
+  --json  Format output as json.
 
 DESCRIPTION
   Say hello
@@ -61,15 +64,16 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/vincenthome/hello-world/blob/v0.0.0/dist/commands/hello/index.ts)_
-
-## `ngbuildutil hello world`
+## `ngbuildutil hello world [COUNTRY]`
 
 Say hello world
 
 ```
 USAGE
-  $ ngbuildutil hello world
+  $ ngbuildutil hello world [COUNTRY]
+
+ARGUMENTS
+  COUNTRY  Person to say hello to
 
 DESCRIPTION
   Say hello world
@@ -117,7 +121,7 @@ EXAMPLES
   $ ngbuildutil plugins
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.0.11/src/commands/plugins/index.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.0/src/commands/plugins/index.ts)_
 
 ## `ngbuildutil plugins:inspect PLUGIN...`
 
